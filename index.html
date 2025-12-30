@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Varshney | AI/ML Developer & Data Scientist</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/modern-styles.css">
+    <link rel="shortcut icon" href="img/favicon_av.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="scroll-progress"></div>
+    <div class="spotlight"></div>
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo wow bounceInDown">
+            <span class="logo-bracket">&lt;</span> AV <span class="logo-bracket">/&gt;</span>
+        </a>
+        <div class="nav-links wow bounceInDown" data-wow-delay="0.2s">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#stats">Stats</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="home">
+        <!-- Background Elements -->
+        <div id="particles-js"></div>
+        <div class="hero-glow"></div> <!-- Atmospheric Glow -->
+
+        <div class="container">
+            <div class="hero-content">
+                <h3 class="subtitle wow fadeInDown" data-wow-delay="0.2s">Hello, I'm</h3>
+                <h1 class="glitch-name wow zoomIn" data-wow-delay="0.4s" data-value="Ayush Varshney">Ayush Varshney</h1>
+                <div class="typed-text wow fadeInUp" data-wow-delay="0.6s">
+                    <span class="element"></span>
+                </div>
+
+                <p class="hero-desc wow fadeInUp" data-wow-delay="0.8s">
+                    3+ years of experience in Generative AI, Deep Learning (NLP, CV), and MLOps.
+                    <br>
+                    Architecting end-to-end ML solutions on <strong>AWS/Azure/GCP</strong>.
+                </p>
+
+                <div class="buttons wow fadeInUp" data-wow-delay="1s">
+                    <a href="#contact" class="btn primary-btn magnetic-btn">Get In Touch</a>
+                    <a href="#projects" class="btn secondary-btn magnetic-btn">View Work</a>
+                </div>
+
+                <div class="social-links wow fadeInUp" data-wow-delay="1.2s">
+                    <a href="https://github.com/ayush-09" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ayush-varshney-495422185/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ayushvarshney43@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="wow fadeInDownBig">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <!-- Terminal Window -->
+                <div class="terminal-window wow fadeInUp">
+                    <div class="terminal-header">
+                        <div class="terminal-btn red"></div>
+                        <div class="terminal-btn yellow"></div>
+                        <div class="terminal-btn green"></div>
+                        <div class="terminal-title">about_me.py</div>
+                    </div>
+                    <div class="terminal-body">
+                        <p id="about-typewriter"></p>
+                    </div>
+                </div>
+
+                <div class="about-stats wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="stat-item">
+                        <h4>3+</h4>
+                        <p>Years Exp.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>20+</h4>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>10+</h4>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="#contact" class="btn wow fadeInUp" data-wow-delay="0.7s">Hire Me</a>
+                </div>
+            </div>
+
+            <!-- New: Tech Visual Side -->
+            <div class="about-visual wow fadeInRight">
+                <div class="tech-frame">
+                    <img src="img/ayush.jpg" alt="Ayush Varshney - AI Engineer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="wow slideInLeft">
+        <div class="section-title">
+            <h2>Work Experience</h2>
+        </div>
+        <div class="timeline">
+            <!-- Central Animated Line -->
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" id="timeline-progress"></div>
+
+            <!-- Job 1: ContractPodAi -->
+            <div class="timeline-item left wow fadeInLeft">
+                <div class="timeline-node"></div>
+                <div class="content-box theme-agentic">
+                    <span class="date">Nov 2025 - Present</span>
+                    <h3>AI Engineer</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">ContractPodAi, Remote
+                    </p>
+                    <ul>
+                        <li>Building multi-agentic document AI chatbot using GCP and langchain flow.</li>
+                    </ul>
+                    <div class="role-tech-stack">
+                        <span>GCP</span>
+                        <span>LangChain</span>
+                        <span>Multi-Agent</span>
+                        <span>Document AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job 2: SoftSensor -->
+            <div class="timeline-item right wow fadeInRight">
+                <div class="timeline-node"></div>
+                <div class="content-box theme-data">
+                    <span class="date">Aug 2023 - Nov 2025</span>
+                    <h3>Data Scientist</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">SoftSensor.AI, Gurgaon
+                    </p>
+                    <ul>
+                        <li>Led predictive analysis analyzing 10B+ data points; deployed 18+ ML models.</li>
+                        <li>Enhanced chatbots with RAG/OCR (30% speedup) and migrated to Azure Fabric.</li>
+                    </ul>
+                    <div class="role-tech-stack">
+                        <span>Azure Fabric</span>
+                        <span>RAG</span>
+                        <span>OCR</span>
+                        <span>Predictive ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job 3: Novelti -->
+            <div class="timeline-item left wow fadeInLeft">
+                <div class="timeline-node"></div>
+                <div class="content-box theme-creative">
+                    <span class="date">Feb 2023 - Aug 2023</span>
+                    <h3>Junior AI ML Developer</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">Novelti Solutions,
+                        Bengaluru</p>
+                    <ul>
+                        <li>Developed AI HR analysis app (60% efficiency boost) & doc-AI screening.</li>
+                        <li>Benchmarked Llama2/ColBERT using RAFT.</li>
+                    </ul>
+                    <div class="role-tech-stack">
+                        <span>Llama 2</span>
+                        <span>RAFT</span>
+                        <span>NER</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="wow fadeInUp">
+        <div class="section-title">
+            <h2>Technical Skills</h2>
+        </div>
+        <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+            <!-- 1. Generative AI & Deep Learning -->
+            <div class="skill-category wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="category-header">
+                    <i class="fas fa-brain"></i>
+                    <div>
+                        <h3>Generative AI & Deep Learning</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">LLMs, NLP, & Computer Vision
+                        </p>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Large Language Models (Llama 2, GPT-4)</span>
+                    <span class="skill-tag">RAG Pipelines</span>
+                    <span class="skill-tag">LangChain & LlamaIndex</span>
+                    <span class="skill-tag">TensorFlow & PyTorch</span>
+                    <span class="skill-tag">Whisper (Voice AI)</span>
+                    <span class="skill-tag">HuggingFace Transformers</span>
+                </div>
+            </div>
+
+            <!-- 2. MLOps & Cloud Architecture -->
+            <div class="skill-category wow fadeInRight" data-wow-delay="0.2s">
+                <div class="category-header">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div>
+                        <h3>MLOps & Cloud Architecture</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Deployment, Scaling &
+                            Pipelines</p>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS (SageMaker, Lambda, S3)</span>
+                    <span class="skill-tag">Azure (ML Studio, Fabric)</span>
+                    <span class="skill-tag">Docker Containerization</span>
+                    <span class="skill-tag">Kubernetes & AKS</span>
+                    <span class="skill-tag">CI/CD for Machine Learning</span>
+                    <span class="skill-tag">MLflow Experiment Tracking</span>
+                </div>
+            </div>
+
+            <!-- 3. Data Engineering & Analytics -->
+            <div class="skill-category wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="category-header">
+                    <i class="fas fa-chart-network"></i>
+                    <div>
+                        <h3>Data Strategy & Analytics</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Data Processing &
+                            Visualization</p>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python (Pandas, NumPy)</span>
+                    <span class="skill-tag">SQL & NoSQL (MongoDB, PostgreSQL)</span>
+                    <span class="skill-tag">ETL Pipelines</span>
+                    <span class="skill-tag">PowerBI & Tableau Dashboards</span>
+                    <span class="skill-tag">Data Warehousing</span>
+                </div>
+            </div>
+
+            <!-- 4. Full Stack Product Engineering -->
+            <div class="skill-category wow fadeInRight" data-wow-delay="0.4s">
+                <div class="category-header">
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <h3>Product Engineering</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">End-to-End Application Dev
+                        </p>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Django & FastAPI</span>
+                    <span class="skill-tag">IoT & Embedded Systems</span>
+                    <span class="skill-tag">Git Version Control</span>
+                    <span class="skill-tag">Agile/Jira</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="wow zoomIn">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+        </div>
+        <div id="project-lists" class="owl-carousel owl-theme">
+            <!-- Project New: HR Resume Screening -->
+            <a href="https://digital-recruitment.streamlit.app/" target="_blank" class="project-card-link">
+                <div class="project-card effect-scan">
+                    <div class="project-img" style="background: url('img/hr_dashboard.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>HR Resume Screening</h3>
+                        <p>AI-powered recruitment tool using NLP & Pinecone to rank resumes against job descriptions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">#Streamlit</span>
+                            <span class="project-tag">#NLP</span>
+                            <span class="project-tag">#Pinecone</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 1 -->
+            <a href="https://github.com/ayush-09/FlappyBird" target="_blank" class="project-card-link">
+                <div class="project-card effect-glitch">
+                    <div class="project-img" style="background: url('img/modi.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>AI Game Agent (RL)</h3>
+                        <p>Created a Flappy Bird Reinforcement Learning Agent using Q-learning, attaining high scores
+                            and
+                            demonstrating innovative gaming AI.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#ReinforcementLearning</span>
+                            <span class="project-tag">#Python</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 2 -->
+            <a href="https://github.com/ayush-09/Face_Mask_Detector" target="_blank" class="project-card-link">
+                <div class="project-card effect-target">
+                    <div class="project-img" style="background: url('img/mask.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Face Mask Detection</h3>
+                        <p>Real-time system using OpenCV and CNN to detect face masks with 96% accuracy.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#OpenCV</span>
+                            <span class="project-tag">#CNN</span>
+                            <span class="project-tag">#DeepLearning</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 3 -->
+            <a href="https://github.com/ayush-09/Twitter-US-Airlines-Sentiment-Analysis-" target="_blank"
+                class="project-card-link">
+                <div class="project-card effect-pulse effect-start">
+                    <div class="project-img" style="background: url('img/sentiment.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Sentiment Analysis</h3>
+                        <p>Implemented TF-IDF and Random Forest models to analyze US Airline tweets, achieving 92%
+                            accuracy.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">#NLP</span>
+                            <span class="project-tag">#MachineLearning</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 5: Covid-19 -->
+            <a href="https://github.com/ayush-09/Covid-19_Current_Scenario_Worldwide" target="_blank"
+                class="project-card-link">
+                <div class="project-card effect-pulse effect-start">
+                    <div class="project-img" style="background: url('img/corona.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Covid-19 Scenario</h3>
+                        <p>Current situation of corona virus in all over the world shown in maps.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#DataVis</span>
+                            <span class="project-tag">#Mapping</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 6: Face Recognition -->
+            <a href="https://github.com/ayush-09/Face-Detector" target="_blank" class="project-card-link">
+                <div class="project-card effect-scan">
+                    <div class="project-img" style="background: url('img/face%20Recognition.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Face Recognition</h3>
+                        <p>Recognizes the face from the database through machine learning.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#ML</span>
+                            <span class="project-tag">#ComputerVision</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 7: Car No. Plate -->
+            <a href="https://github.com/ayush-09/OpenCv" target="_blank" class="project-card-link">
+                <div class="project-card effect-target">
+                    <div class="project-img" style="background: url('img/car.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Car Plate Detector</h3>
+                        <p>Detect car number plates from video and images using OpenCV.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#OpenCV</span>
+                            <span class="project-tag">#Python</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 8: Pizza Delivery -->
+            <a href="#" class="project-card-link">
+                <div class="project-card effect-pulse">
+                    <div class="project-img"
+                        style="background: url('img/pizza-hut-virar-west-palghar-pizza-outlets-t0gpfzz86w.png') center/cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Pizza Delivery</h3>
+                        <p>Website design through the Django REST framework.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#Django</span>
+                            <span class="project-tag">#WebDev</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Project 9: Smart Agriculture -->
+            <a href="#" class="project-card-link">
+                <div class="project-card effect-pulse">
+                    <div class="project-img" style="background: url('img/agriculture.png') center/cover;"></div>
+                    <div class="project-info">
+                        <h3>Smart Agriculture</h3>
+                        <p>IoT based system for smart farming (Work in Progress).</p>
+                        <div class="project-tags">
+                            <span class="project-tag">#IoT</span>
+                            <span class="project-tag">#SmartFarming</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div align="center" style="margin-top: 40px;">
+            <a href="https://github.com/ayush-09" target="_blank" class="btn btn-outline">View More on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <!-- Travel Background -->
+        <div class="world-map-bg">
+            <div class="map-dots"></div>
+            <div class="flight-path fp-1"></div>
+            <div class="flight-path fp-2"></div>
+            <div class="flight-path fp-3"></div>
+            <i class="fas fa-plane travel-plane"></i>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-title wow fadeInUp">
+                <h2>Let's Connect Worldwide</h2>
+                <div class="travel-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">CURRENTLY EXPLORING: <span style="color: var(--primary-color);">AI
+                            FRONTIERS</span></span>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <!-- Travel Card: Info -->
+                <div class="contact-info wow fadeInLeft">
+                    <div class="info-card board-pass-style">
+                        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="card-details">
+                            <h3>Base Station</h3>
+                            <p>India (Open to Relocate)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card board-pass-style">
+                        <div class="card-icon"><i class="fas fa-paper-plane"></i></div>
+                        <div class="card-details">
+                            <h3>Direct Line</h3>
+                            <p><a href="mailto:ayushvarshney43@gmail.com">ayushvarshney43@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card board-pass-style">
+                        <div class="card-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="card-details">
+                            <h3>Professional Network</h3>
+                            <p><a href="https://www.linkedin.com/in/ayush-varshney-495422185/" target="_blank">Connect
+                                    on LinkedIn</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel Card: Form -->
+                <div class="contact-form wow fadeInRight glass-postcard">
+                    <form action="https://formspree.io/f/xvgzyqzb" method="POST">
+                        <div class="form-header">
+                            <span class="stamp">AIR MAIL</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Engineer Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Comms Frequency (Email)" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Launch Message <i class="fas fa-rocket"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <!-- Tech Stream Section (Formerly Stats) -->
+    <section class="stat wow fadeInUp" id="stats">
+        <div class="section-title">
+            <h2>AI Tech Arsenal</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-top: 10px;">Powering intelligent solutions
+                with cutting-edge tech.</p>
+        </div>
+        <div class="tech-stream-container">
+            <!-- Row 1: Concepts -->
+            <div class="stream-track left-scroll">
+                <span class="stream-item">Generative AI</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Large Language Models (LLMs)</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Transformers</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Retrieval Augmented Generation (RAG)</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Computer Vision</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Reinforcement Learning</span>
+                <span class="stream-dot">•</span> <!-- Duplicates for infinite scroll illusion -->
+                <span class="stream-item">Generative AI</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Large Language Models (LLMs)</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">Transformers</span>
+                <span class="stream-dot">•</span>
+                <span class="stream-item">RAG</span>
+                <span class="stream-dot">•</span>
+            </div>
+
+
+            <!-- Row 2: Tools -->
+            <div class="stream-track right-scroll">
+                <span class="stream-item tool">PyTorch</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">TensorFlow</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">LangChain</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">Hugging Face</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">Docker & Kubernetes</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">AWS SageMaker</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">MLflow</span>
+                <span class="stream-dot">/</span> <!-- Duplicates -->
+                <span class="stream-item tool">PyTorch</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">TensorFlow</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">LangChain</span>
+                <span class="stream-dot">/</span>
+                <span class="stream-item tool">Hugging Face</span>
+                <span class="stream-dot">/</span>
+            </div>
+
+            <!-- Dashboard Separator -->
+            <div class="tech-separator"></div>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-grid">
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.2s">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h2><span class="counter">3</span>+</h2>
+                    <p>YEARS EXP.</p>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.4s">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2><span class="counter">30</span>+</h2>
+                    <p>PROJECTS</p>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.6s">
+                    <i class="fas fa-code"></i>
+                    <h2><span class="counter">6600</span>+</h2>
+                    <p>HOURS CODING</p>
+                </div>
+                <div class="stat-item wow fadeInUp" data-wow-delay="0.8s">
+                    <i class="fas fa-coffee"></i>
+                    <h2><span class="counter">976</span>+</h2>
+                    <p>COFFEE CUPS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ayush Varshney. All Rights Reserved.</p>
+        <p style="font-size: 0.9rem; margin-top: 10px;">Designed & Built with <i class="fas fa-heart"
+                style="color: var(--primary-color);"></i></p>
+    </footer>
+
+    <!-- Script to handle header scroll effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                navbar.style.padding = '15px 50px';
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.8)';
+                navbar.style.padding = '20px 50px';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            for (const pair of formData) {
+                data.append(pair[0], pair[1]);
+            }
+
+            fetch('https://script.google.com/macros/s/AKfycbxs3oYTxeGmiQkph7fFwnhT5Oh3zT2pLedeg2d-uesqSstH0Ojfp4G04c11gyqMlsu-Sg/exec', {
+                method: 'POST',
+                body: data
+            })
+                .then(response => {
+                    alert("Thanks for Contact!");
+                    form.reset();
+                })
+                .catch(error => {
+                    alert("Something went wrong. Please try again.");
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalText;
+                });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/modern-scripts.js"></script>
+</body>
+
+</html>
