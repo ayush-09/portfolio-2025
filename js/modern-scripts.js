@@ -31,44 +31,46 @@ $(document).ready(function () {
 /* -------------------------------------------------------------------------- */
 function initCounters() {
     const counters = document.querySelectorAll('.counter');
-    const speed = 200; // The lower the slower
+    const duration = 2000; // 2 seconds animation for all
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
 
+                // Get target number safely
+                let targetText = counter.getAttribute('data-target');
+                if (!targetText) {
+                    targetText = counter.innerText;
+                    counter.setAttribute('data-target', targetText);
+                }
+
+                // Parse standard integer (remove non-digits)
+                const target = parseInt(targetText.replace(/\D/g, ''));
+
+                if (isNaN(target)) {
+                    observer.unobserve(counter);
+                    return;
+                }
+
+                // Start from 0
+                counter.innerText = '0';
+
+                // Animation params
+                const frameDuration = 20; // 50fps
+                const totalFrames = duration / frameDuration;
+                const increment = target / totalFrames;
+
+                let current = 0;
+
                 const updateCount = () => {
-                    const target = +counter.getAttribute('data-target') || +counter.innerText.replace(/\D/g, ''); // fallback to text content if no attribute
-                    // If the text has non-digits (like 10B+), we need to extract the number. 
-                    // However, the HTML is: <h2><span class="counter">6600</span>+</h2>
-                    // So innerText is just "6600". Perfect.
-                    // But wait, "10B+" -> span has "10", B+ is outside? 
-                    // Let's check HTML.
-                    // <span class="counter">10</span>B+ 
-                    // <span class="counter">6600</span>+
+                    current += increment;
 
-                    const count = +counter.innerText.replace(/\D/g, ''); // Current value (starts at 0 usually or keep original as start) -- wait, we want to animate FROM 0.
-
-                    // We need to store standard target.
-                    // Let's just grab the target from the initial innerText and then set innerText to 0 to start.
-
-                    if (!counter.hasAttribute('data-target')) {
-                        counter.setAttribute('data-target', counter.innerText);
-                        counter.innerText = '0';
-                    }
-
-                    const targetNumber = +counter.getAttribute('data-target').replace(/\D/g, '');
-                    const currentParam = +counter.innerText.replace(/\D/g, '');
-
-                    // Logic to count up
-                    const inc = targetNumber / speed * 5; // increment step
-
-                    if (currentParam < targetNumber) {
-                        counter.innerText = Math.ceil(currentParam + inc);
-                        setTimeout(updateCount, 15);
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(() => setTimeout(updateCount, frameDuration));
                     } else {
-                        counter.innerText = targetNumber; // Final value
+                        counter.innerText = target;
                     }
                 };
 

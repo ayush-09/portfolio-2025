@@ -2085,14 +2085,21 @@ footer {
     @media screen and (max-width: 768px) {
 
         /* Navbar collapse */
+        /* Navbar collapse */
         .navbar {
             flex-direction: column;
             padding: 15px;
             background: rgba(10, 10, 10, 0.95);
         }
 
+        .logo {
+            margin-right: 0;
+            /* Remove right margin from desktop */
+        }
+
         .nav-links {
             margin-top: 15px;
+            display: flex !important;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
