@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypingEffect();
     initNavbarScroll();
     initTimeline();
+    initCounters();
 });
 
 // Initialize jQuery plugins
@@ -23,13 +24,67 @@ $(document).ready(function () {
             1000: { items: 3 }
         }
     });
-
-    // Counter Up
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
 });
+
+/* -------------------------------------------------------------------------- */
+/*                                Counter Animation                           */
+/* -------------------------------------------------------------------------- */
+function initCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target') || +counter.innerText.replace(/\D/g, ''); // fallback to text content if no attribute
+                    // If the text has non-digits (like 10B+), we need to extract the number. 
+                    // However, the HTML is: <h2><span class="counter">6600</span>+</h2>
+                    // So innerText is just "6600". Perfect.
+                    // But wait, "10B+" -> span has "10", B+ is outside? 
+                    // Let's check HTML.
+                    // <span class="counter">10</span>B+ 
+                    // <span class="counter">6600</span>+
+
+                    const count = +counter.innerText.replace(/\D/g, ''); // Current value (starts at 0 usually or keep original as start) -- wait, we want to animate FROM 0.
+
+                    // We need to store standard target.
+                    // Let's just grab the target from the initial innerText and then set innerText to 0 to start.
+
+                    if (!counter.hasAttribute('data-target')) {
+                        counter.setAttribute('data-target', counter.innerText);
+                        counter.innerText = '0';
+                    }
+
+                    const targetNumber = +counter.getAttribute('data-target').replace(/\D/g, '');
+                    const currentParam = +counter.innerText.replace(/\D/g, '');
+
+                    // Logic to count up
+                    const inc = targetNumber / speed * 5; // increment step
+
+                    if (currentParam < targetNumber) {
+                        counter.innerText = Math.ceil(currentParam + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = targetNumber; // Final value
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter); // Only animate once
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                               Modern UX Features                           */
